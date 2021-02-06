@@ -22,22 +22,21 @@ export const AddTransaction = () => {
 
     return (
         <>
-            <h3>Add new transaction</h3>
+            <h3>Adaugă o tranzacție</h3>
             <form onSubmit={onSubmit}>
                 <div className="form-control">
-                    <label htmlFor="text">Text</label>
+                    <label htmlFor="text">Nume</label>
                     <input type="text" value={text} onChange={(e) => setText(e.target.value)} 
-                           placeholder="Enter text..." />
+                           placeholder="Introdu numele tranzacției" />
                 </div>
                 <div className="form-control">
                     <label htmlFor="amount"
-                    >Amount <br />
-                    (negative - expense, positive - income)</label
-                    >
+                    >Sumă <br />
+                    (negativ - cheltuială, pozitiv - venit)</label>
                     <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)}
-                           placeholder="Enter amount..." />
+                           placeholder="Introdu suma" />
                 </div>
-            <button className="btn">Add transaction</button>
+            <button className="btn">Adaugă tranzacția</button>
             </form>
         </>
     )
